@@ -96,7 +96,6 @@ class Calculator {
       return;
     }
 
-    // — otherwise do exactly what you had before:
     if (this.operator !== null) {
       const rhs = this.currentValue === '' ? this.result : this.currentValue;
       this.result = this.handleStringEquation(this.result, rhs, this.operator);
