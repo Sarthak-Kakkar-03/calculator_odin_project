@@ -9,8 +9,6 @@ body {
     display: flex;
     flex: 1 1 auto;
     max-width: 750px;
-    border-style: dashed;
-    border-color: black;
     align-self: center;
     min-height: 750px;
     justify-content: center;
@@ -37,18 +35,31 @@ body {
     display: flex;
     max-height: 100px;
     flex: 1 1 250px;
-    border-style: dashed;
-    border-color: white;
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
 }
 
 .display {
+display: flex;
  border-style: dashed;
- border-color: wheat;
+ border-color: black;
  flex: 1 1 auto;
  justify-content: flex-end;
+ color: white;
+ font-size: 30px;
+ overflow: hidden;
+}
+
+.display.result-display {
+    font-size: 24px;
+    color: lightgray;
+    display: flex;
+    flex: 0 1 auto;
+}
+.display.current-display {
+    display: flex;
+    flex: 0 1 auto;
 }
 
 .button-container {
@@ -93,3 +104,6 @@ body {
 background-color: gray;
 }
 
+#backspace {
+     background-color: rgb(41, 36, 36);
+}
