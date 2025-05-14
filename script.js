@@ -89,20 +89,26 @@ class Calculator {
     });
   }
 
-  handleOperatorClick(operator) {
+    handleOperatorClick(operator) {
+    if (this.operator !== null && this.currentValue === '') {
+      this.operator = (operator === '=') ? null : operator;
+      this.updateView();
+      return;
+    }
+
+    // — otherwise do exactly what you had before:
     if (this.operator !== null) {
       const rhs = this.currentValue === '' ? this.result : this.currentValue;
-
       this.result = this.handleStringEquation(this.result, rhs, this.operator);
-
     } else if (this.currentValue !== '') {
       this.result = this.currentValue;
     }
 
     this.currentValue = '';
-    this.operator = (operator === '=') ? null : operator;
+    this.operator     = (operator === '=') ? null : operator;
     this.updateView();
   }
+
 
   handleOperationalClick() {
     switch (this.operationalCommand) {
