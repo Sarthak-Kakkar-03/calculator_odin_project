@@ -1,2 +1,5 @@
 # calculator_odin_project
-Web based calculator for front end practice
+- Another practice project with vanilla CSS, JavaScript, and HTML.
+- Uses solely flexbox, no grid yet.
+- Copies the Apple UI for calculator implementation.
+- Please use the following link: 
